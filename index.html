@@ -6,24 +6,55 @@
     <title>Qonita Nur Hidayah | D4 RPL POLINDRA</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <style>
         body {
             font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
         }
+
         .hero {
             background: linear-gradient(135deg, #0d6efd, #1e3c72);
             color: white;
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
         }
+
         .section-title {
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
+
         .profile-img {
-            border-radius: 15px;
+            border-radius: 20px;
             max-width: 100%;
+            transition: 0.4s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .card-custom {
+            padding: 20px;
+            border-radius: 15px;
+            transition: 0.3s;
+            background: white;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            background: #111;
+            color: white;
         }
     </style>
 </head>
@@ -42,29 +73,30 @@
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-    <h1>Qonita Nur Hidayah</h1>
-    <p>Mahasiswa D4 Rekayasa Perangkat Lunak</p>
-    <p>Teknik Informatika | Semester 4</p>
+<div class="hero" data-aos="fade-down">
+    <h1 data-aos="zoom-in" data-aos-delay="200">Qonita Nur Hidayah</h1>
+    <p data-aos="fade-up" data-aos-delay="400">
+        Mahasiswa D4 Rekayasa Perangkat Lunak <br>
+        Teknik Informatika | Semester 4
+    </p>
 </div>
 
 <!-- ABOUT -->
 <div class="container py-5" id="about">
-    <h2 class="text-center section-title">Tentang Saya</h2>
+    <h2 class="text-center section-title" data-aos="fade-up">Tentang Saya</h2>
     <div class="row align-items-center">
-        <div class="col-md-5">
+        <div class="col-md-5" data-aos="fade-right">
             <img src="img/qonita1.jpeg" class="profile-img" alt="Qonita">
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7" data-aos="fade-left">
             <p>
                 Halo, saya Qonita Nur Hidayah, mahasiswa Teknik Informatika
-                Program Studi D4 Rekayasa Perangkat Lunak di
-                Politeknik Negeri Indramayu (POLINDRA).
+                Program Studi D4 Rekayasa Perangkat Lunak di POLINDRA.
             </p>
             <p>
                 Saat ini saya berada di semester 4 dengan NIM 2405002.
-                Saya memiliki minat besar di bidang pengembangan perangkat lunak,
-                web development, serta teknologi digital.
+                Saya memiliki minat di bidang pengembangan perangkat lunak
+                dan teknologi digital.
             </p>
         </div>
     </div>
@@ -72,87 +104,108 @@
 
 <!-- DATA DIRI -->
 <div class="container py-5 bg-light">
-    <h2 class="text-center section-title">Data Diri</h2>
+    <h2 class="text-center section-title" data-aos="fade-up">Data Diri</h2>
     <div class="row text-center">
-        <div class="col-md-3">
-            <h5>Nama</h5>
-            <p>Qonita Nur Hidayah</p>
+        <div class="col-md-3" data-aos="zoom-in">
+            <div class="card-custom">
+                <h5>Nama</h5>
+                <p>Qonita Nur Hidayah</p>
+            </div>
         </div>
-        <div class="col-md-3">
-            <h5>NIM</h5>
-            <p>2405002</p>
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card-custom">
+                <h5>NIM</h5>
+                <p>2405002</p>
+            </div>
         </div>
-        <div class="col-md-3">
-            <h5>Jurusan</h5>
-            <p>Teknik Informatika</p>
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card-custom">
+                <h5>Jurusan</h5>
+                <p>Teknik Informatika</p>
+            </div>
         </div>
-        <div class="col-md-3">
-            <h5>Prodi</h5>
-            <p>D4 Rekayasa Perangkat Lunak</p>
+        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card-custom">
+                <h5>Prodi</h5>
+                <p>D4 Rekayasa Perangkat Lunak</p>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- SKILL -->
 <div class="container py-5" id="skill">
-    <h2 class="text-center section-title">Keahlian</h2>
+    <h2 class="text-center section-title" data-aos="fade-up">Keahlian</h2>
     <div class="row text-center">
-        <div class="col-md-4">
-            <h5>HTML & CSS</h5>
-            <p>Mampu membuat tampilan website responsif.</p>
+        <div class="col-md-4" data-aos="flip-left">
+            <div class="card-custom">
+                <h5>HTML & CSS</h5>
+                <p>Mampu membuat tampilan website responsif.</p>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h5>Bootstrap</h5>
-            <p>Menggunakan framework untuk desain modern.</p>
+        <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+            <div class="card-custom">
+                <h5>Bootstrap</h5>
+                <p>Menggunakan framework untuk desain modern.</p>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h5>Dasar Pemrograman</h5>
-            <p>Memahami konsep algoritma dan logika pemrograman.</p>
+        <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
+            <div class="card-custom">
+                <h5>Dasar Pemrograman</h5>
+                <p>Memahami konsep algoritma dan logika.</p>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- HOBI -->
 <div class="container py-5 bg-light" id="hobi">
-    <h2 class="text-center section-title">Hobi</h2>
+    <h2 class="text-center section-title" data-aos="fade-up">Hobi</h2>
     <div class="row text-center">
-        <div class="col-md-6">
-            <h5>Berdagang</h5>
-            <p>Saya senang berdagang dan belajar tentang dunia bisnis.</p>
+        <div class="col-md-6" data-aos="fade-right">
+            <div class="card-custom">
+                <h5>Berdagang</h5>
+                <p>Saya senang berdagang dan belajar bisnis.</p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <h5>Membuat Kue</h5>
-            <p>Menyukai kegiatan membuat kue dan mencoba resep baru.</p>
+        <div class="col-md-6" data-aos="fade-left">
+            <div class="card-custom">
+                <h5>Membuat Kue</h5>
+                <p>Saya menyukai kegiatan membuat kue dan mencoba resep baru.</p>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- FOTO KAMPUS -->
+<!-- FOTO -->
 <div class="container py-5 text-center">
-    <h2 class="section-title">Kampus</h2>
-    <img src="img/qonita4.jpeg" class="profile-img" alt="POLINDRA">
-</div>
-
-<!-- MOTIVASI -->
-<div class="container py-5 text-center">
-    <h2 class="section-title">Motivasi</h2>
-    <p>"Terus belajar, berkembang, dan menjadi versi terbaik dari diri sendiri."</p>
+    <h2 class="section-title" data-aos="fade-up">Galeri</h2>
+    <img src="img/qonita4.jpeg" class="profile-img" data-aos="zoom-in" alt="Foto">
 </div>
 
 <!-- CONTACT -->
 <div class="container py-5" id="contact">
-    <h2 class="text-center section-title">Kontak</h2>
-    <div class="text-center">
+    <h2 class="text-center section-title" data-aos="fade-up">Kontak</h2>
+    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
         <p>Email: qonita@email.com</p>
         <p>Instagram: @qonita</p>
     </div>
 </div>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center py-3">
+<footer class="text-center py-3">
     &copy; 2026 Qonita Nur Hidayah | D4 RPL POLINDRA
 </footer>
 
+<!-- JS -->
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
+
 </body>
 </html>
