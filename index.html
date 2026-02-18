@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="utf-8">
     <title>Qonita Nur Hidayah | D4 RPL POLINDRA</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- AOS Animation -->
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             scroll-behavior: smooth;
         }
 
+        /* HERO */
         .hero {
-            background: linear-gradient(135deg, #0d6efd, #1e3c72);
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f9b0f, #00c853, #1b5e20);
+            background-size: 200% 200%;
+            animation: gradientMove 6s ease infinite;
             color: white;
-            padding: 100px 0;
-            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid white;
+            box-shadow: 0 0 40px rgba(255,255,255,0.6);
+            transition: 0.4s;
+        }
+
+        .hero-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px rgba(255,255,255,0.9);
         }
 
         .section-title {
@@ -30,26 +54,16 @@
             margin-bottom: 40px;
         }
 
-        .profile-img {
-            border-radius: 20px;
-            max-width: 100%;
-            transition: 0.4s;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-
-        .card-custom {
-            padding: 20px;
+        .card-box {
+            padding: 25px;
             border-radius: 15px;
-            transition: 0.3s;
             background: white;
+            transition: 0.3s;
         }
 
-        .card-custom:hover {
+        .card-box:hover {
             transform: translateY(-10px);
-            box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         footer {
@@ -62,8 +76,8 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top px-4">
-    <a class="navbar-brand" href="#">Qonita</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top px-4">
+    <a class="navbar-brand fw-bold" href="#">Qonita</a>
     <div class="navbar-nav ms-auto">
         <a class="nav-link" href="#about">Tentang</a>
         <a class="nav-link" href="#skill">Keahlian</a>
@@ -73,124 +87,148 @@
 </nav>
 
 <!-- HERO -->
-<div class="hero" data-aos="fade-down">
-    <h1 data-aos="zoom-in" data-aos-delay="200">Qonita Nur Hidayah</h1>
-    <p data-aos="fade-up" data-aos-delay="400">
-        Mahasiswa D4 Rekayasa Perangkat Lunak <br>
-        Teknik Informatika | Semester 4
-    </p>
-</div>
+<section class="hero text-center">
+    <div class="container">
+        <div data-aos="zoom-in">
+            <img src="img/qonita1.jpeg" class="hero-img mb-4" alt="Qonita">
+        </div>
+
+        <h1 class="fw-bold" data-aos="fade-up" data-aos-delay="200">
+            Qonita Nur Hidayah
+        </h1>
+
+        <p class="lead" data-aos="fade-up" data-aos-delay="400">
+            Mahasiswa D4 Rekayasa Perangkat Lunak <br>
+            Teknik Informatika | Semester 4
+        </p>
+    </div>
+</section>
 
 <!-- ABOUT -->
-<div class="container py-5" id="about">
-    <h2 class="text-center section-title" data-aos="fade-up">Tentang Saya</h2>
-    <div class="row align-items-center">
-        <div class="col-md-5" data-aos="fade-right">
-            <img src="img/qonita1.jpeg" class="profile-img" alt="Qonita">
-        </div>
-        <div class="col-md-7" data-aos="fade-left">
-            <p>
-                Halo, saya Qonita Nur Hidayah, mahasiswa Teknik Informatika
-                Program Studi D4 Rekayasa Perangkat Lunak di POLINDRA.
-            </p>
-            <p>
-                Saat ini saya berada di semester 4 dengan NIM 2405002.
-                Saya memiliki minat di bidang pengembangan perangkat lunak
-                dan teknologi digital.
-            </p>
+<section class="py-5" id="about">
+    <div class="container">
+        <h2 class="text-center section-title" data-aos="fade-up">Tentang Saya</h2>
+
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+                <p>
+                    Saya adalah mahasiswa Teknik Informatika Program Studi
+                    D4 Rekayasa Perangkat Lunak di Politeknik Negeri Indramayu.
+                </p>
+                <p>
+                    Saat ini berada di semester 4 dengan NIM 2405002.
+                    Saya memiliki minat dalam pengembangan web,
+                    perangkat lunak, dan teknologi digital.
+                </p>
+            </div>
+
+            <div class="col-md-6 text-center" data-aos="fade-left">
+                <img src="img/qonita4.jpeg" class="img-fluid rounded" style="max-width:350px;">
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- DATA DIRI -->
-<div class="container py-5 bg-light">
-    <h2 class="text-center section-title" data-aos="fade-up">Data Diri</h2>
-    <div class="row text-center">
-        <div class="col-md-3" data-aos="zoom-in">
-            <div class="card-custom">
-                <h5>Nama</h5>
-                <p>Qonita Nur Hidayah</p>
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center section-title" data-aos="fade-up">Data Diri</h2>
+
+        <div class="row text-center">
+            <div class="col-md-3" data-aos="zoom-in">
+                <div class="card-box">
+                    <h5>Nama</h5>
+                    <p>Qonita Nur Hidayah</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card-custom">
-                <h5>NIM</h5>
-                <p>2405002</p>
+
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card-box">
+                    <h5>NIM</h5>
+                    <p>2405002</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card-custom">
-                <h5>Jurusan</h5>
-                <p>Teknik Informatika</p>
+
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card-box">
+                    <h5>Jurusan</h5>
+                    <p>Teknik Informatika</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
-            <div class="card-custom">
-                <h5>Prodi</h5>
-                <p>D4 Rekayasa Perangkat Lunak</p>
+
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card-box">
+                    <h5>Prodi</h5>
+                    <p>D4 Rekayasa Perangkat Lunak</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- SKILL -->
-<div class="container py-5" id="skill">
-    <h2 class="text-center section-title" data-aos="fade-up">Keahlian</h2>
-    <div class="row text-center">
-        <div class="col-md-4" data-aos="flip-left">
-            <div class="card-custom">
-                <h5>HTML & CSS</h5>
-                <p>Mampu membuat tampilan website responsif.</p>
+<section class="py-5" id="skill">
+    <div class="container">
+        <h2 class="text-center section-title" data-aos="fade-up">Keahlian</h2>
+
+        <div class="row text-center">
+            <div class="col-md-4" data-aos="flip-left">
+                <div class="card-box">
+                    <h5>HTML & CSS</h5>
+                    <p>Membuat tampilan website responsif dan modern.</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
-            <div class="card-custom">
-                <h5>Bootstrap</h5>
-                <p>Menggunakan framework untuk desain modern.</p>
+
+            <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                <div class="card-box">
+                    <h5>Bootstrap</h5>
+                    <p>Menggunakan framework untuk desain cepat dan rapi.</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
-            <div class="card-custom">
-                <h5>Dasar Pemrograman</h5>
-                <p>Memahami konsep algoritma dan logika.</p>
+
+            <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
+                <div class="card-box">
+                    <h5>Dasar Pemrograman</h5>
+                    <p>Memahami algoritma dan logika pemrograman.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- HOBI -->
-<div class="container py-5 bg-light" id="hobi">
-    <h2 class="text-center section-title" data-aos="fade-up">Hobi</h2>
-    <div class="row text-center">
-        <div class="col-md-6" data-aos="fade-right">
-            <div class="card-custom">
-                <h5>Berdagang</h5>
-                <p>Saya senang berdagang dan belajar bisnis.</p>
+<section class="py-5 bg-light" id="hobi">
+    <div class="container">
+        <h2 class="text-center section-title" data-aos="fade-up">Hobi</h2>
+
+        <div class="row text-center">
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="card-box">
+                    <h5>Berdagang</h5>
+                    <p>Suka belajar bisnis dan dunia usaha.</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6" data-aos="fade-left">
-            <div class="card-custom">
-                <h5>Membuat Kue</h5>
-                <p>Saya menyukai kegiatan membuat kue dan mencoba resep baru.</p>
+
+            <div class="col-md-6" data-aos="fade-left">
+                <div class="card-box">
+                    <h5>Membuat Kue</h5>
+                    <p>Senang mencoba resep baru dan berkreasi.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- FOTO -->
-<div class="container py-5 text-center">
-    <h2 class="section-title" data-aos="fade-up">Galeri</h2>
-    <img src="img/qonita4.jpeg" class="profile-img" data-aos="zoom-in" alt="Foto">
-</div>
+</section>
 
 <!-- CONTACT -->
-<div class="container py-5" id="contact">
-    <h2 class="text-center section-title" data-aos="fade-up">Kontak</h2>
-    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-        <p>Email: qonita@email.com</p>
-        <p>Instagram: @qonita</p>
+<section class="py-5" id="contact">
+    <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Kontak</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+            Email: qonita@email.com <br>
+            Instagram: @qonita
+        </p>
     </div>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer class="text-center py-3">
